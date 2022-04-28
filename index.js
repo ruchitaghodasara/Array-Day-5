@@ -58,3 +58,26 @@ console.log(itCompanies.shift());
 console.log(itCompanies.splice(Math.floor((itCompanies.length - 1) / 2)), 1);
 console.log(itCompanies, itCompanies.pop());
 console.log(itCompanies.splice(0, itCompanies.length), itCompanies);
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux'];
+const backEnd = ['Node', 'Express', 'MongoDB'];
+const fullStack = frontEnd.concat(backEnd);
+console.log(fullStack);
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort((a, b) => a - b);
+console.log(ages, ages[0], ages[ages.length - 1]);
+
+function avgAges(array) {
+  let sum = 0,
+    avg = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  avg = sum / array.length;
+  console.log(avg);
+  console.log(array[array.length - 1] - array[0]);
+  console.log(Math.abs(array[array.length - 1] - avg));
+  console.log(Math.abs(array[0] - avg));
+}
+
+avgAges(ages);
